@@ -89,9 +89,13 @@
     --charcoal: #3a3630;
     --muted: #7a7268;
     --white: #ffffff;
+  
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--dark); font-weight: 300; overflow-x: hidden; }
+  .nav-call { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dark); text-decoration: none; border: 1px solid rgba(58,54,48,0.4); padding: 9px 20px; transition: all 0.25s; white-space: nowrap; }
+.nav-call:hover { border-color: var(--saffron); color: var(--saffron); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
 
   /* NAV */
   nav {
@@ -282,6 +286,7 @@
     .footer-contact { text-align: center; }
     .footer-nav { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px 20px; }
     .footer-bottom { padding: 16px 24px; }
+    .nav-call { display: none; }
   }
 
   @media (max-width: 600px) {
@@ -342,7 +347,10 @@
     <li><a href="#locations">Locations</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
+  <div class="nav-actions">
+  <a href="tel:2106464102" class="nav-call">Call Now</a>
   <a href="#contact" class="nav-cta">Book Your Date</a>
+</div>
 </nav>
 
 <!-- HERO -->
